@@ -51,33 +51,59 @@
                 perspective: 1000px;
             }
         }
+        
+        /* Responsive media queries for better mobile optimization */
+        @media (max-width: 640px) {
+            .transform-3d {
+                transform: none !important;
+            }
+            .hover\:rotate-y-15:hover {
+                transform: none !important;
+            }
+            .text-shadow {
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .perspective {
+                perspective: none;
+            }
+        }
     </style>
 </head>
-<body class="bg-gradient-to-br from-primary via-secondary to-accent min-h-screen p-5 font-sans">
-    <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transform-3d transition-3d hover:rotate-y-15 perspective">
+<body class="bg-gradient-to-br from-primary via-secondary to-accent min-h-screen p-2 sm:p-3 md:p-5 font-sans">
+    <div class="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl mx-auto bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden transform-3d transition-3d md:hover:rotate-y-15 perspective">
         <!-- Header with 3D effect -->
-        <div class="bg-gradient-to-r from-primary to-secondary p-8 text-center text-white">
-            <div class="animate-float mx-auto mb-6 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <img src="./assets/eat_fast.png" alt="Eat Fast Logo" class="w-16 h-16 rounded-full object-contain" id="logo">
+        <div class="bg-gradient-to-r from-primary to-secondary p-4 sm:p-6 md:p-8 text-center text-white">
+            <div class="animate-float mx-auto mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <img src="./assets/eat_fast.png" alt="Eat Fast Logo" class="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-contain" id="logo">
             </div>
-            <h1 class="text-3xl font-bold text-shadow mb-2">Inscription à la newsletter Eat Fast <span class="inline-block animate-pulse">🇨🇲</span></h1>
-            <p class="opacity-90">Rejoignez la révolution de la livraison au Cameroun</p>
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-shadow mb-2 leading-tight">
+                Inscription à la newsletter Eat Fast 
+                <span class="inline-block animate-pulse">🇨🇲</span>
+            </h1>
+            <p class="opacity-90 text-sm sm:text-base px-2">Rejoignez la révolution de la livraison au Cameroun</p>
         </div>
         
-        <div class="p-8 md:p-10">
-            <div class="bg-gray-50 p-6 rounded-xl mb-8 border-l-4 border-primary">
-                <p><strong class="text-primary">Eat-Fast</strong> est une application 100 % camerounaise de livraison de nourriture. Elle vise à connecter les consommateurs aux meilleurs restaurants locaux, avec un service rapide et fiable. Le lancement est prévu à Yaoundé, avec une expansion progressive à l'échelle nationale. Inscrivez-vous pour recevoir les dernières actualités, offres spéciales et opportunités !</p>
+        <div class="p-4 sm:p-6 md:p-8 lg:p-10">
+            <div class="bg-gray-50 p-4 sm:p-6 rounded-lg sm:rounded-xl mb-6 sm:mb-8 border-l-4 border-primary">
+                <p class="text-sm sm:text-base leading-relaxed">
+                    <strong class="text-primary">Eat-Fast</strong> est une application 100 % camerounaise de livraison de nourriture. Elle vise à connecter les consommateurs aux meilleurs restaurants locaux, avec un service rapide et fiable. Le lancement est prévu à Yaoundé, avec une expansion progressive à l'échelle nationale. Inscrivez-vous pour recevoir les dernières actualités, offres spéciales et opportunités !
+                </p>
                 
-                <!-- About Us Section -->
-                <div class="mt-6 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
-                    <div class="flex items-center justify-between">
+                <!-- About Us Section - Responsive Layout -->
+                <div class="mt-4 sm:mt-6 p-3 sm:p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-3 sm:space-y-0">
                         <div class="flex-1">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">En savoir plus sur Eat Fast</h3>
-                            <p class="text-gray-600 text-sm">Découvrez notre histoire, notre mission et notre vision pour révolutionner la livraison de nourriture au Cameroun.</p>
+                            <h3 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">En savoir plus sur Eat Fast</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                Découvrez notre histoire, notre mission et notre vision pour révolutionner la livraison de nourriture au Cameroun.
+                            </p>
                         </div>
-                        <div class="ml-4">
+                        <div class="sm:ml-4 flex justify-center sm:justify-end">
                             <a href="./pages/about_us.html" 
-                               class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary to-green-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition duration-300 text-sm">
+                               class="inline-flex items-center px-3 sm:px-4 py-2 bg-gradient-to-r from-primary to-green-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition duration-300 text-xs sm:text-sm w-full sm:w-auto justify-center">
                                 <span class="mr-2">📖</span>
                                 À propos de nous
                                 <span class="ml-2">→</span>
@@ -87,25 +113,29 @@
                 </div>
             </div>
             
-            <div id="successMessage" class="bg-green-100 text-green-800 p-4 rounded-lg mb-6 border border-green-200 hidden animate_animated animate_fadeIn">
+            <div id="successMessage" class="bg-green-100 text-green-800 p-3 sm:p-4 rounded-lg mb-4 sm:mb-6 border border-green-200 hidden animate_animated animate_fadeIn text-sm sm:text-base">
                 ✅ Inscription réussie ! Merci de votre intérêt pour Eat Fast. Vous recevrez bientôt nos actualités !
             </div>
             
-            <div id="errorMessage" class="bg-red-100 text-red-800 p-4 rounded-lg mb-6 border border-red-200 hidden animate_animated animate_fadeIn">
+            <div id="errorMessage" class="bg-red-100 text-red-800 p-3 sm:p-4 rounded-lg mb-4 sm:mb-6 border border-red-200 hidden animate_animated animate_fadeIn text-sm sm:text-base">
                 ❌ Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.
             </div>
             
-            <form id="eatFastForm" class="space-y-6">
+            <form id="eatFastForm" class="space-y-4 sm:space-y-6">
                 <div>
-                    <label for="email" class="block font-semibold text-gray-700 mb-2">Adresse e-mail <span class="text-accent">*</span></label>
+                    <label for="email" class="block font-semibold text-gray-700 mb-2 text-sm sm:text-base">
+                        Adresse e-mail <span class="text-accent">*</span>
+                    </label>
                     <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com" 
-                           class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
+                           class="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-300 text-sm sm:text-base">
                 </div>
                 
                 <div>
-                    <label for="role" class="block font-semibold text-gray-700 mb-2">Quel est votre rôle ? <span class="text-accent">*</span></label>
+                    <label for="role" class="block font-semibold text-gray-700 mb-2 text-sm sm:text-base">
+                        Quel est votre rôle ? <span class="text-accent">*</span>
+                    </label>
                     <select id="role" name="role" required 
-                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-300 appearance-none bg-white">
+                            class="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-300 appearance-none bg-white text-sm sm:text-base">
                         <option value="">Sélectionnez votre catégorie</option>
                         <option value="client">Client</option>
                         <option value="gestionnaire">Gestionnaire de restaurant</option>
@@ -115,51 +145,66 @@
                 </div>
                 
                 <div>
-                    <label for="nom" class="block font-semibold text-gray-700 mb-2">Nom complet (optionnel)</label>
+                    <label for="nom" class="block font-semibold text-gray-700 mb-2 text-sm sm:text-base">
+                        Nom complet (optionnel)
+                    </label>
                     <input type="text" id="nom" name="nom" placeholder="Votre nom complet" 
-                           class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
-                    <small class="text-gray-500 text-sm">Cela nous permet de mieux personnaliser nos messages.</small>
+                           class="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-300 text-sm sm:text-base">
+                    <small class="text-gray-500 text-xs sm:text-sm">Cela nous permet de mieux personnaliser nos messages.</small>
                 </div>
                 
                 <div>
-                    <label class="block font-semibold text-gray-700 mb-2">Souhaitez-vous recevoir nos newsletters ?</label>
-                    <div class="space-y-3 mt-3">
-                        <div class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-200">
+                    <label class="block font-semibold text-gray-700 mb-2 text-sm sm:text-base">
+                        Souhaitez-vous recevoir nos newsletters ?
+                    </label>
+                    <div class="space-y-2 sm:space-y-3 mt-3">
+                        <div class="flex items-start sm:items-center p-2 sm:p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-200">
                             <input type="checkbox" id="updates" name="preferences" value="updates" 
-                                   class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
-                            <label for="updates" class="ml-3">Oui, je veux recevoir les mises à jour sur l'application</label>
+                                   class="w-4 h-4 sm:w-5 sm:h-5 text-primary rounded focus:ring-primary border-gray-300 mt-0.5 sm:mt-0 flex-shrink-0">
+                            <label for="updates" class="ml-2 sm:ml-3 text-xs sm:text-sm leading-relaxed">
+                                Oui, je veux recevoir les mises à jour sur l'application
+                            </label>
                         </div>
-                        <div class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-200">
+                        <div class="flex items-start sm:items-center p-2 sm:p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-200">
                             <input type="checkbox" id="offers" name="preferences" value="offers" 
-                                   class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
-                            <label for="offers" class="ml-3">Oui, je suis intéressé(e) par les offres et promotions</label>
+                                   class="w-4 h-4 sm:w-5 sm:h-5 text-primary rounded focus:ring-primary border-gray-300 mt-0.5 sm:mt-0 flex-shrink-0">
+                            <label for="offers" class="ml-2 sm:ml-3 text-xs sm:text-sm leading-relaxed">
+                                Oui, je suis intéressé(e) par les offres et promotions
+                            </label>
                         </div>
-                        <div class="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-200">
+                        <div class="flex items-start sm:items-center p-2 sm:p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-200">
                             <input type="checkbox" id="beta" name="preferences" value="beta" 
-                                   class="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300">
-                            <label for="beta" class="ml-3">Oui, je veux participer à la phase de test (beta)</label>
+                                   class="w-4 h-4 sm:w-5 sm:h-5 text-primary rounded focus:ring-primary border-gray-300 mt-0.5 sm:mt-0 flex-shrink-0">
+                            <label for="beta" class="ml-2 sm:ml-3 text-xs sm:text-sm leading-relaxed">
+                                Oui, je veux participer à la phase de test (beta)
+                            </label>
                         </div>
                     </div>
                 </div>
                 
                 <div>
-                    <label for="ville" class="block font-semibold text-gray-700 mb-2">Dans quelle ville êtes-vous basé(e) ? <span class="text-accent">*</span></label>
+                    <label for="ville" class="block font-semibold text-gray-700 mb-2 text-sm sm:text-base">
+                        Dans quelle ville êtes-vous basé(e) ? <span class="text-accent">*</span>
+                    </label>
                     <input type="text" id="ville" name="ville" required placeholder="Ex: Yaoundé, Douala, Bafoussam..." 
-                           class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
-                    <small class="text-gray-500 text-sm">Pour vous informer du lancement dans votre région.</small>
+                           class="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-300 text-sm sm:text-base">
+                    <small class="text-gray-500 text-xs sm:text-sm">Pour vous informer du lancement dans votre région.</small>
                 </div>
                 
                 <button type="submit" id="submitBtn" 
-                        class="w-full bg-gradient-to-r from-primary to-green-600 text-white py-4 px-6 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 flex items-center justify-center">
-                    <span>🚀 Rejoindre la communauté Eat Fast</span>
+                        class="w-full bg-gradient-to-r from-primary to-green-600 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-full font-bold text-sm sm:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 flex items-center justify-center">
+                    <span class="text-center">🚀 Rejoindre la communauté Eat Fast</span>
                     <span id="loading" class="ml-2 hidden animate-spin">⏳</span>
                 </button>
             </form>
         </div>
         
-        <div class="bg-gray-50 p-6 text-center text-gray-600 text-sm">
-            <p>© 2025 Eat Fast - Application 100% camerounaise <span class="inline-block animate-pulse-slow">🇨🇲</span></p>
-            <p class="mt-1">Votre adresse email ne sera pas partagée avec des tiers.</p>
+        <div class="bg-gray-50 p-4 sm:p-6 text-center text-gray-600 text-xs sm:text-sm">
+            <p class="leading-relaxed">
+                © 2025 Eat Fast - Application 100% camerounaise 
+                <span class="inline-block animate-pulse-slow">🇨🇲</span>
+            </p>
+            <p class="mt-1 leading-relaxed">Votre adresse email ne sera pas partagée avec des tiers.</p>
         </div>
     </div>
 
