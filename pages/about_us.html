@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Eat Fast | Plateforme de Livraison de Repas 100% Camerounaise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #228B22 0%, #FFD700 50%, #DC143C 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px) rotateY(5deg);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            font-size: 36px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .timeline-content {
+            position: relative;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .team-card:hover .team-social {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white py-20 px-5 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-yellow-400"></div>
+            <div class="absolute top-1/3 right-1/3 w-40 h-40 rounded-full bg-red-600"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-28 h-28 rounded-full bg-green-500"></div>
+        </div>
+        <div class="max-w-4xl mx-auto relative">
+            <div class="inline-block relative">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 animate__animated animate__fadeInDown">Notre Future Plateforme</h1>
+                <span class="coming-soon-badge animate__animated animate__pulse animate__infinite">Bientôt disponible!</span>
+            </div>
+            <p class="text-xl md:text-2xl mb-8 animate__animated animate__fadeIn animate__delay-1s">
+                Eat Fast - Une révolution en préparation dans la livraison de repas, conçue au Cameroun pour les Camerounais
+            </p>
+            <div class="animate__animated animate__fadeInUp animate__delay-2s">
+                <span class="inline-block text-4xl">🇨🇲</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Countdown Section -->
+    <div class="bg-white py-10 shadow-md">
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Lancement de la version beta dans:</h3>
+            <div class="flex justify-center space-x-4">
+                <div class="bg-gray-100 rounded-lg p-4 w-20">
+                    <div class="text-3xl font-bold text-green-600" id="days">30</div>
+                    <div class="text-gray-600 text-sm">Jours</div>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 w-20">
+                    <div class="text-3xl font-bold text-green-600" id="hours">00</div>
+                    <div class="text-gray-600 text-sm">Heures</div>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 w-20">
+                    <div class="text-3xl font-bold text-green-600" id="minutes">00</div>
+                    <div class="text-gray-600 text-sm">Minutes</div>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 w-20">
+                    <div class="text-3xl font-bold text-green-600" id="seconds">00</div>
+                    <div class="text-gray-600 text-sm">Secondes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- About Section -->
+    <div class="max-w-7xl mx-auto px-5 py-16">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Qui sommes-nous?</h2>
+                <div class="w-24 h-1 bg-green-600 mb-6"></div>
+                <p class="text-lg text-gray-600 mb-6">
+                    Eat Fast est une startup technologique camerounaise née en 2025 avec une ambition claire : digitaliser et optimiser l'expérience de livraison de repas au Cameroun tout en valorisant notre riche patrimoine culinaire.
+                </p>
+                <p class="text-lg text-gray-600 mb-6">
+                    Notre équipe multidisciplinaire combine expertise technique, connaissance approfondie du marché local et passion pour la gastronomie camerounaise.
+                </p>
+                <div class="bg-green-50 border-l-4 border-green-600 p-4 mb-6">
+                    <p class="text-green-800 font-medium">
+                        "Notre mission : Connecter les amoureux de la cuisine camerounaise avec les meilleurs restaurants locaux via une plateforme technologique performante et adaptée aux spécificités locales."
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Équipe Eat Fast" class="w-full h-auto">
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Figures Section -->
+    <div class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Eat Fast en Chiffres</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Notre impact prévu dans les premiers mois d'opération
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-4xl font-bold text-green-600 mb-2">20+</div>
+                    <p class="text-gray-600">Restaurants partenaires</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-4xl font-bold text-yellow-500 mb-2">20+</div>
+                    <p class="text-gray-600">Livreurs formés</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-4xl font-bold text-red-600 mb-2">50+</div>
+                    <p class="text-gray-600">Utilisateurs actifs</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">30min a 45 min</div>
+                    <p class="text-gray-600">Livraison moyenne</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- User Roles Section -->
+    <div class="max-w-7xl mx-auto px-5 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Pour Qui est Conçue Eat Fast?</h2>
+            <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Notre plateforme en développement est pensée pour trois acteurs clés de l'écosystème alimentaire camerounais
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Client Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-green-600 text-white p-6">
+                    <h3 class="text-xl font-bold">Clients</h3>
+                    <p class="opacity-90">Les amoureux de la cuisine camerounaise</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Commandez facilement vos plats préférés</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Suivi en temps réel de votre commande</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Paiement sécurisé et multiple options</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Notation et avis sur les restaurants</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Restaurant Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-yellow-500 text-white p-6">
+                    <h3 class="text-xl font-bold">Restaurateurs</h3>
+                    <p class="opacity-90">Professionnels de la cuisine locale</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2">✓</span>
+                            <span>Augmentez votre visibilité en ligne</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2">✓</span>
+                            <span>Gestion simplifiée des commandes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2">✓</span>
+                            <span>Tableau de bord analytique</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2">✓</span>
+                            <span>Formation à la digitalisation</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Delivery Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-red-600 text-white p-6">
+                    <h3 class="text-xl font-bold">Livreurs</h3>
+                    <p class="opacity-90">Acteurs clés de notre service</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✓</span>
+                            <span>Revenus flexibles et compétitifs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✓</span>
+                            <span>Application dédiée pour les livraisons</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✓</span>
+                            <span>Formation et équipement fournis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✓</span>
+                            <span>Assurance et protection sociale</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Notre Mission</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Connecter les amoureux de la cuisine camerounaise avec les meilleurs restaurants locaux, tout en créant des opportunités économiques et en valorisant notre riche patrimoine culinaire.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-green-600 text-4xl mb-4">🍲</div>
+                    <h3 class="text-xl font-bold mb-3">Valorisation Culinaire</h3>
+                    <p class="text-gray-600">
+                        Promouvoir les plats traditionnels camerounais et donner de la visibilité aux petits restaurants locaux.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-yellow-500 text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-3">Livraison Express</h3>
+                    <p class="text-gray-600">
+                        Garantir une livraison en moins de 30 minutes grâce à notre système d'optimisation des trajets.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-red-600 text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold mb-3">Impact Social</h3>
+                    <p class="text-gray-600">
+                        Créer des emplois décents pour les livreurs et former les PME à la digitalisation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Environmental Section Adapted to Cameroon -->
+<div class="max-w-7xl mx-auto px-5 py-16">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img src="../assets/test.jpeg" alt="Initiatives écologiques au Cameroun" class="w-full h-auto">
+        </div>
+        <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Notre Engagement Écologique au Cameroun</h2>
+            <div class="w-24 h-1 bg-green-600 mb-6"></div>
+            <p class="text-lg text-gray-600 mb-6">
+                Eat Fast s'engage à soutenir le développement durable et à promouvoir des pratiques respectueuses de l’environnement à travers tout le Cameroun :
+            </p>
+            <ul class="space-y-4">
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-3 text-xl">✓</span>
+                    <span class="text-gray-600">
+                        <strong>Emballages biodégradables :</strong> Adoption d’emballages en feuilles de bananier, papier recyclé ou matières compostables fabriquées localement.
+                    </span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-3 text-xl">✓</span>
+                    <span class="text-gray-600">
+                        <strong>Appui aux producteurs locaux :</strong> Collaboration avec les agriculteurs des régions du Centre, de l’Ouest et du Nord-Ouest pour favoriser les circuits courts et encourager l’agriculture bio.
+                    </span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-3 text-xl">✓</span>
+                    <span class="text-gray-600">
+                        <strong>Éducation environnementale :</strong> Sensibilisation des livreurs et des clients aux gestes écologiques via des campagnes locales.
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    <!-- CTA Section -->
+    <div class="bg-gray-800 text-white py-16 text-center">
+        <div class="max-w-3xl mx-auto px-5">
+            <h2 class="text-3xl font-bold mb-6">Prêt à faire partie de la révolution Eat Fast?</h2>
+            <p class="text-xl opacity-90 mb-8">
+                Que vous soyez client, restaurant ou livreur, rejoignez notre communauté en pleine croissance.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="../index.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Devenir Restaurant Partenaire
+                </a>
+                <a href="../index.html" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Postuler comme Livreur
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Eat Fast</h3>
+                    <p>
+                        La future application de livraison de repas 100% camerounaise, en développement pour valoriser notre culture culinaire.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">À Venir</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-green-400">Version Beta</a></li>
+                        <li><a href="#" class="hover:text-green-400">Fonctionnalités</a></li>
+                        <li><a href="#" class="hover:text-green-400">Devenir Partenaire</a></li>
+                        <li><a href="#" class="hover:text-green-400">Recrutement</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Développement</h3>
+                    <ul class="space-y-2">
+                        <li>contact@eatfast.cm</li>
+                        <li>+237 678 944 169</li>
+                        <li>Yaoundé, Cameroun</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Suivez le Projet</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <span class="text-xl">📱</span>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <span class="text-xl">📘</span>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <span class="text-xl">📸</span>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <span class="text-xl">🐦</span>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm opacity-80">
+                            En cours de développement - Lancement prévu dans 1 mois
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p>© 2025 Eat Fast. Tous droits réservés. 🇨🇲</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const launchDate = new Date();
+            launchDate.setDate(now.getDate() + 30); // Set to 30 days from now
+            
+            const diff = launchDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = Math.floor(hours).toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = Math.floor(minutes).toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = Math.floor(seconds).toString().padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
