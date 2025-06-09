@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Newsletter Eat Fast 🇨🇲</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #228B22 0%, #FFD700 50%, #DC143C 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #228B22, #FFD700);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #228B22;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .form-content {
+            padding: 40px;
+        }
+        
+        .description {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #228B22;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .required {
+            color: #DC143C;
+        }
+        
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        input[type="text"]:focus, input[type="email"]:focus, select:focus {
+            outline: none;
+            border-color: #228B22;
+            box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.1);
+        }
+        
+        .checkbox-group {
+            margin-top: 10px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .checkbox-item:hover {
+            background: #e9ecef;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 12px;
+            transform: scale(1.2);
+            accent-color: #228B22;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(34, 139, 34, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(34, 139, 34, 0.4);
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .flag {
+            font-size: 20px;
+            margin-left: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .form-content {
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🍽️</div>
+            <h1>Inscription à la newsletter Eat Fast <span class="flag">🇨🇲</span></h1>
+            <p>Rejoignez la révolution de la livraison au Cameroun</p>
+        </div>
+        
+        <div class="form-content">
+            <div class="description">
+                <p><strong>Eat-Fast</strong> est une application 100 % camerounaise de livraison de nourriture. Elle vise à connecter les consommateurs aux meilleurs restaurants locaux, avec un service rapide et fiable. Le lancement est prévu à Yaoundé, avec une expansion progressive à l'échelle nationale. Inscrivez-vous pour recevoir les dernières actualités, offres spéciales et opportunités !</p>
+            </div>
+            
+            <form id="eatFastForm">
+                <div class="form-group">
+                    <label for="email">Adresse e-mail <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="role">Quel est votre rôle ? <span class="required">*</span></label>
+                    <select id="role" name="role" required>
+                        <option value="">Sélectionnez votre catégorie</option>
+                        <option value="client">Client</option>
+                        <option value="gestionnaire">Gestionnaire de restaurant</option>
+                        <option value="livreur">Livreur</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nom">Nom complet (optionnel)</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom complet">
+                    <small style="color: #666; font-size: 12px;">Cela nous permet de mieux personnaliser nos messages.</small>
+                </div>
+                
+                <div class="form-group">
+                    <label>Souhaitez-vous recevoir nos newsletters ?</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="updates" name="preferences" value="updates">
+                            <label for="updates">Oui, je veux recevoir les mises à jour sur l'application</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="offers" name="preferences" value="offers">
+                            <label for="offers">Oui, je suis intéressé(e) par les offres et promotions</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="beta" name="preferences" value="beta">
+                            <label for="beta">Oui, je veux participer à la phase de test (beta)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ville">Dans quelle ville êtes-vous basé(e) ? <span class="required">*</span></label>
+                    <input type="text" id="ville" name="ville" required placeholder="Ex: Yaoundé, Douala, Bafoussam...">
+                    <small style="color: #666; font-size: 12px;">Pour vous informer du lancement dans votre région.</small>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    🚀 Rejoindre la communauté Eat Fast
+                </button>
+            </form>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Eat Fast - Application 100% camerounaise 🇨🇲</p>
+            <p>Votre adresse email ne sera pas partagée avec des tiers.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('eatFastForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collecte des données
+            const formData = new FormData(this);
+            const data = {};
+            
+            // Données simples
+            data.email = formData.get('email');
+            data.role = formData.get('role');
+            data.nom = formData.get('nom');
+            data.ville = formData.get('ville');
+            
+            // Préférences (checkboxes multiples)
+            const preferences = formData.getAll('preferences');
+            data.preferences = preferences;
+            
+            // Simulation d'envoi
+            alert(`✅ Inscription réussie !\n\nMerci ${data.nom || 'cher(e) utilisateur'} !\n\nNous avons bien reçu votre inscription en tant que "${data.role}" depuis ${data.ville}.\n\nVous recevrez bientôt les dernières nouvelles d'Eat Fast à ${data.email} ! 🇨🇲🍽️`);
+            
+            // Log des données (pour développement)
+            console.log('Données collectées:', data);
+            
+            // Réinitialiser le formulaire
+            this.reset();
+        });
+    </script>
+</body>
+</html>
