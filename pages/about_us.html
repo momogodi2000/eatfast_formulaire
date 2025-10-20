@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos - Eat Fast | Plateforme de Livraison de Repas 100% Camerounaise</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="application-name" content="Eat Fast">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Eat Fast">
+    <meta name="description" content="À propos d'Eat Fast - Application de livraison 100% camerounaise">
+    <meta name="theme-color" content="#228B22">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="../pwa/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="../assets/image/eat_fast.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/image/eat_fast.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
@@ -62,6 +78,23 @@
     </style>
 </head>
 <body class="bg-gray-50">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="../assets/image/eat_fast.png" alt="Eat Fast Logo" class="w-8 h-8 rounded-full">
+                    <span class="font-bold text-xl text-gray-800">Eat Fast</span>
+                </div>
+                <a href="../pages/newsletter.html" 
+                   class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 flex items-center">
+                    <span class="mr-2">📝</span>
+                    S'inscrire à la Newsletter
+                </a>
+            </div>
+        </div>
+    </nav>
+    
     <!-- Hero Section -->
     <div class="gradient-bg text-white py-20 px-5 text-center relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full opacity-10">
@@ -84,25 +117,62 @@
     </div>
 
     <!-- Countdown Section -->
-    <div class="bg-white py-10 shadow-md">
-        <div class="max-w-3xl mx-auto text-center">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Lancement de la version beta dans:</h3>
-            <div class="flex justify-center space-x-4">
-                <div class="bg-gray-100 rounded-lg p-4 w-20">
-                    <div class="text-3xl font-bold text-green-600" id="days">30</div>
-                    <div class="text-gray-600 text-sm">Jours</div>
+    <div class="bg-gradient-to-r from-green-600 to-green-700 py-16 text-white">
+        <div class="max-w-6xl mx-auto text-center px-5">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 animate__animated animate__pulse animate__infinite">🚀 Lancement Approche !</h2>
+            
+            <!-- Web Version Countdown -->
+            <div class="mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold mb-6 text-yellow-300 animate__animated animate__bounceIn animate__delay-1s">Version Web - 12 Novembre 2024</h3>
+                <div class="flex justify-center flex-wrap gap-4 mb-8">
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 min-w-[120px] animate__animated animate__fadeInUp animate__delay-2s hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl md:text-5xl font-bold text-yellow-300" id="webDays">00</div>
+                        <div class="text-white/80 text-sm font-medium">Jours</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 min-w-[120px] animate__animated animate__fadeInUp animate__delay-3s hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl md:text-5xl font-bold text-yellow-300" id="webHours">00</div>
+                        <div class="text-white/80 text-sm font-medium">Heures</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 min-w-[120px] animate__animated animate__fadeInUp animate__delay-4s hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl md:text-5xl font-bold text-yellow-300" id="webMinutes">00</div>
+                        <div class="text-white/80 text-sm font-medium">Minutes</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 min-w-[120px] animate__animated animate__fadeInUp animate__delay-5s hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl md:text-5xl font-bold text-yellow-300 animate-pulse" id="webSeconds">00</div>
+                        <div class="text-white/80 text-sm font-medium">Secondes</div>
+                    </div>
                 </div>
-                <div class="bg-gray-100 rounded-lg p-4 w-20">
-                    <div class="text-3xl font-bold text-green-600" id="hours">00</div>
-                    <div class="text-gray-600 text-sm">Heures</div>
+            </div>
+
+            <!-- Mobile Version Countdown -->
+            <div class="border-t border-white/30 pt-12">
+                <h3 class="text-2xl md:text-3xl font-bold mb-6 text-yellow-300 animate__animated animate__bounceIn animate__delay-6s">Version Mobile - 10 Décembre 2024</h3>
+                <div class="flex justify-center flex-wrap gap-4">
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 min-w-[120px] animate__animated animate__fadeInUp animate__delay-7s hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl md:text-5xl font-bold text-blue-300" id="mobileDays">00</div>
+                        <div class="text-white/80 text-sm font-medium">Jours</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 min-w-[120px] animate__animated animate__fadeInUp animate__delay-8s hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl md:text-5xl font-bold text-blue-300" id="mobileHours">00</div>
+                        <div class="text-white/80 text-sm font-medium">Heures</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 min-w-[120px] animate__animated animate__fadeInUp animate__delay-9s hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl md:text-5xl font-bold text-blue-300" id="mobileMinutes">00</div>
+                        <div class="text-white/80 text-sm font-medium">Minutes</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 min-w-[120px] animate__animated animate__fadeInUp animate__delay-10s hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl md:text-5xl font-bold text-blue-300 animate-pulse" id="mobileSeconds">00</div>
+                        <div class="text-white/80 text-sm font-medium">Secondes</div>
+                    </div>
                 </div>
-                <div class="bg-gray-100 rounded-lg p-4 w-20">
-                    <div class="text-3xl font-bold text-green-600" id="minutes">00</div>
-                    <div class="text-gray-600 text-sm">Minutes</div>
-                </div>
-                <div class="bg-gray-100 rounded-lg p-4 w-20">
-                    <div class="text-3xl font-bold text-green-600" id="seconds">00</div>
-                    <div class="text-gray-600 text-sm">Secondes</div>
+            </div>
+            
+            <div class="mt-12 animate__animated animate__fadeIn animate__delay-11s">
+                <p class="text-lg opacity-90 mb-6">🎉 Soyez prêt pour la révolution de la livraison au Cameroun !</p>
+                <div class="flex justify-center">
+                    <div class="bg-yellow-300 text-green-700 px-8 py-3 rounded-full font-bold text-lg animate__animated animate__pulse animate__infinite">
+                        🇨🇲 Made in Cameroon
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,6 +197,96 @@
             </div>
             <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Équipe Eat Fast" class="w-full h-auto">
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Lead Section - Mme Fina Carine -->
+    <div class="bg-gradient-to-r from-green-50 to-yellow-50 py-16">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Notre Leader Visionnaire</h2>
+                <div class="w-32 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Derrière chaque grande révolution se trouve une visionnaire déterminée
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-gradient-to-br from-green-600 to-green-700 p-8 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="w-32 h-32 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                                    <span class="text-6xl">👩‍💼</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2">Mme Fina Carine</h3>
+                                <p class="text-green-100 text-lg">Fondatrice & CEO</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <div class="mb-6">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">Une Entrepreneuse Camerounaise d'Exception</h4>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    <strong>Mme Fina Carine</strong> est une entrepreneuse camerounaise dynamique et visionnaire, 
+                                    diplômée en informatique et en gestion d'entreprise. Avec plus de 8 ans d'expérience dans 
+                                    l'écosystème tech camerounais, elle a su combiner ses compétences techniques et sa passion 
+                                    pour l'innovation sociale.
+                                </p>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Son ambition pour Eat Fast naît d'un constat simple mais puissant : <em>"La qualité de 
+                                    notre alimentation ne devrait pas être compromise par les défis logistiques"</em>. 
+                                    Elle rêve d'un Cameroun où chaque foyer peut accéder facilement aux meilleurs plats locaux.
+                                </p>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h5 class="font-bold text-green-800 mb-2">🎯 Vision</h5>
+                                    <p class="text-sm text-gray-600">
+                                        Révolutionner l'expérience culinaire au Cameroun en connectant technologie et tradition
+                                    </p>
+                                </div>
+                                <div class="bg-yellow-50 p-4 rounded-lg">
+                                    <h5 class="font-bold text-yellow-800 mb-2">💡 Innovation</h5>
+                                    <p class="text-sm text-gray-600">
+                                        Utiliser la tech pour valoriser notre patrimoine culinaire et créer des emplois locaux
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                                <blockquote class="text-gray-700 italic">
+                                    <p class="mb-2">
+                                        <strong>"Notre mission va au-delà de la livraison de repas. 
+                                        Nous construisons un pont entre le passé et l'avenir du Cameroun, 
+                                        où chaque commande est un acte de résistance culturelle et économique."</strong>
+                                    </p>
+                                    <cite class="text-sm text-blue-600 font-medium">— Mme Fina Carine, Fondatrice</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Achievements Section -->
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-4xl mb-4">🏆</div>
+                        <h5 class="font-bold text-gray-800 mb-2">Récompenses</h5>
+                        <p class="text-sm text-gray-600">Prix de l'Innovation Tech Cameroun 2023</p>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-4xl mb-4">👥</div>
+                        <h5 class="font-bold text-gray-800 mb-2">Impact Social</h5>
+                        <p class="text-sm text-gray-600">500+ emplois directs créés prévus</p>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-4xl mb-4">🌍</div>
+                        <h5 class="font-bold text-gray-800 mb-2">Vision Mondiale</h5>
+                        <p class="text-sm text-gray-600">Expansion panafricaine d'ici 2027</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -302,7 +462,7 @@
 <div class="max-w-7xl mx-auto px-5 py-16">
     <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <img src="../assets/test.jpeg" alt="Initiatives écologiques au Cameroun" class="w-full h-auto">
+            <img src="../assets/image/test.jpeg" alt="Initiatives écologiques au Cameroun" class="w-full h-auto">
         </div>
         <div>
             <h2 class="text-3xl font-bold text-gray-800 mb-6">Notre Engagement Écologique au Cameroun</h2>
@@ -342,11 +502,25 @@
             <p class="text-xl opacity-90 mb-8">
                 Que vous soyez client, restaurant ou livreur, rejoignez notre communauté en pleine croissance.
             </p>
+            
+            <!-- Newsletter Signup CTA -->
+            <div class="bg-gradient-to-r from-green-600 to-green-700 rounded-xl p-8 mb-8">
+                <h3 class="text-2xl font-bold mb-4">🚀 Soyez parmi les premiers !</h3>
+                <p class="text-lg mb-6 opacity-90">
+                    Inscrivez-vous à notre newsletter pour recevoir les dernières actualités, offres exclusives et être notifié du lancement !
+                </p>
+                <a href="../pages/newsletter.html" class="bg-white hover:bg-gray-100 text-green-700 font-bold py-4 px-8 rounded-lg transition duration-300 inline-flex items-center text-lg">
+                    <span class="mr-2">📝</span>
+                    S'inscrire maintenant
+                    <span class="ml-2">→</span>
+                </a>
+            </div>
+            
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="../index.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                <a href="../pages/newsletter.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                     Devenir Restaurant Partenaire
                 </a>
-                <a href="../index.html" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300">
+                <a href="../pages/newsletter.html" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300">
                     Postuler comme Livreur
                 </a>
             </div>
@@ -410,23 +584,71 @@
     </footer>
 
     <script>
-        // Countdown timer
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../pwa/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+        
+        // Enhanced countdown timer for both web and mobile
         function updateCountdown() {
             const now = new Date();
-            const launchDate = new Date();
-            launchDate.setDate(now.getDate() + 30); // Set to 30 days from now
             
-            const diff = launchDate - now;
+            // Web launch: November 12, 2024
+            const webLaunchDate = new Date('2024-11-12T00:00:00');
+            // Mobile launch: December 10, 2024
+            const mobileLaunchDate = new Date('2024-12-10T00:00:00');
             
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            // Update Web countdown
+            updateSingleCountdown(webLaunchDate, now, 'web');
             
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = Math.floor(hours).toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = Math.floor(minutes).toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = Math.floor(seconds).toString().padStart(2, '0');
+            // Update Mobile countdown
+            updateSingleCountdown(mobileLaunchDate, now, 'mobile');
+        }
+        
+        function updateSingleCountdown(targetDate, now, prefix) {
+            const diff = targetDate - now;
+            
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                // Update with animation
+                updateCountdownElement(`${prefix}Days`, days);
+                updateCountdownElement(`${prefix}Hours`, hours.toString().padStart(2, '0'));
+                updateCountdownElement(`${prefix}Minutes`, minutes.toString().padStart(2, '0'));
+                updateCountdownElement(`${prefix}Seconds`, seconds.toString().padStart(2, '0'));
+            } else {
+                updateCountdownElement(`${prefix}Days`, '0');
+                updateCountdownElement(`${prefix}Hours`, '00');
+                updateCountdownElement(`${prefix}Minutes`, '00');
+                updateCountdownElement(`${prefix}Seconds`, '00');
+            }
+        }
+        
+        function updateCountdownElement(id, value) {
+            const element = document.getElementById(id);
+            if (element && element.textContent !== value.toString()) {
+                // Add animation class
+                element.classList.add('animate-pulse');
+                element.textContent = value;
+                
+                // Remove animation class after a short delay
+                setTimeout(() => {
+                    element.classList.remove('animate-pulse');
+                }, 200);
+            } else if (element) {
+                element.textContent = value;
+            }
         }
         
         updateCountdown();

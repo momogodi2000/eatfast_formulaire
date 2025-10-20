@@ -1,0 +1,25 @@
+{
+  "name": "eatfast-newsletter",
+  "version": "1.0.0",
+  "description": "Eat Fast Newsletter Signup Form - PWA Application",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build completed'",
+    "start": "npx serve .",
+    "dev": "npx live-server .",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "newsletter",
+    "food-delivery",
+    "cameroon",
+    "pwa",
+    "eatfast"
+  ],
+  "author": "Eat Fast Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.0"
+  }
+}
